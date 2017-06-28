@@ -1,0 +1,23 @@
+<div class="col-md-10">
+<h3>New Idea</h3>
+{{#if alert}}
+    <div class="alert alert-danger" role="alert">
+        {{alert}}
+    </div>
+{{/if}}
+<form method="POST" action="">
+    <div class="form-group">
+        <label for="title"><strong>
+            Title: 
+        </strong></label>
+        <input type="text" id="title" class="form-control" name="title">
+    </div>
+    <div class="form-group">
+        <label for="desc"><strong>
+            Description: 
+        </strong></label>
+        <textarea class="form-control" id="desc" rows="4" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Create</button>
+</form>
+</div>

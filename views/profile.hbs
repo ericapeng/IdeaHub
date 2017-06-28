@@ -1,0 +1,15 @@
+<div class="col-md-12">
+<h3>{{viewUser.firstName}} {{viewUser.lastName}}</h3>
+<p>{{viewUser.bio}}<p>
+<p>Contact: {{viewUser.email}}</p>
+<a href="{{viewUser.linkedin}}">View LinkedIn Profile</a>
+
+<h4>Ideas:</h4>
+<div class="list-group">
+    {{#each ideas}}
+        <a href="/ideas/{{this.slug}}" class="list-group-item">
+            {{this.title}}({{this.supporters.length}})
+        </a>
+    {{/each}}
+</div>
+</div>

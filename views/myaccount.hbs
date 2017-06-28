@@ -1,0 +1,61 @@
+<div class="col-md-12">
+<h3>My Account</h3>
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+        <a data-toggle="tab" href="#ideas">My Ideas</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#notifs">Notifications 
+            <span class="badge">{{myNotifs.length}}</span>
+        </a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="ideas">
+        <div class="list-group">
+            {{#each myIdeas}}
+                <a href="/ideas/{{this.slug}}" class="list-group-item">
+                    {{this.title}}({{this.supporters.length}})
+                </a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="tab-pane fade" id="notifs">
+        <ul class="media-list">
+            {{#each myNotifs}}
+                <li class="media">
+                    <div class="media-left media-middle">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">
+                            {{this.fullUser.firstName}} {{this.fullUser.lastName}}
+                            {{this.type}} 
+                            your idea, {{this.fullIdea.title}}
+                        </h5>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="btn-toolbar" role="toolbar" aria-label="useraction">
+    <div class="btn-group" role="group" aria-label="newidea">
+        <a class="btn btn-default" href="/myaccount/newidea" role="button">
+           New Idea 
+        </a>
+    </div>
+    <div class="btn-group" role="group" aria-label="editprofile">
+        <a class="btn btn-default" href="/myaccount/editprofile" role="button">
+            Edit Profile
+        </a>
+    </div>
+    <div class="btn-group" role="group" aria-label="logout">
+        <a class="btn btn-default" href="/myaccount/logout" role="button">
+            Logout
+        </a>
+    </div>
+</div>
+</div>

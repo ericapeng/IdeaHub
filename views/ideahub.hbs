@@ -1,0 +1,19 @@
+<div class="col-md-10">
+<h3>Top 3 Hottest Ideas</h3>
+<div class="list-group">
+    {{#each hottestIdeas}}
+        <a href="/ideas/{{this.slug}}" class="list-group-item">
+            {{this.title}}({{this.supporters.length}})
+        </a>
+    {{/each}}
+</div>
+
+<h3>Newest Ideas</h3>
+<div class="list-group">
+    {{#each newestIdeas}}
+        <a href="/ideas/{{this.slug}}" class="list-group-item">
+            {{this.title}}({{this.supporters.length}})
+        </a>
+    {{/each}}
+</div>
+</div>

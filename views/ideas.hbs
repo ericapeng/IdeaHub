@@ -1,0 +1,10 @@
+<div class="col-md-10">
+<h3>All Ideas</h3>
+<div class="list-group">
+    {{#each ideas}}
+        <a href="/ideas/{{this.slug}}" class="list-group-item">
+            {{this.title}}({{this.supporters.length}})
+        </a>
+    {{/each}}
+</div>
+</div>

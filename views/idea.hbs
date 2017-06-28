@@ -1,0 +1,82 @@
+<div class="col-md-12">
+<h3>{{idea.title}}
+    <small> 
+        by 
+        <a href="/profile/{{author._id}}">
+            {{author.firstName}} {{author.lastName}}
+        </a>
+    </small>
+</h3>
+<p>{{idea.description}}</p>
+
+<p class="text-center">
+    {{idea.supporters.length}} Supporters
+</p>
+<div class="btn-toolbar" role="toolbar" aria-label="useraction">
+    {{#if supportable}}
+    <div class="btn-group" role="group" aria-label="support">
+        <form method="POST" action="/ideas/{{idea.slug}}/support">
+            <button type="submit" class="btn btn-default" id="support">
+                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                Support this idea
+            </button>
+        </form>
+    </div>
+    {{else}}
+    <div class="btn-group" role="group" aria-label="unsupport">
+        <form method="POST" action="/ideas/{{idea.slug}}/unsupport">
+            <button type="submit" class="btn btn-primary" id="unsupport">
+                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                Unsupport this idea
+            </button>
+        </form>
+    </div>
+    {{/if}}
+
+    {{#if joinable}}
+    <div class="btn-group" role="group" aria-label="join">
+        <form method="POST" action="/ideas/{{idea.slug}}/join">
+            <button type="submit" class="btn btn-default" id="join">
+                <span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
+                Join this idea
+            </button>
+        </form>
+    </div>
+    {{else}}
+    <div class="btn-group" role="group" aria-label="unjoin">
+        <form method="POST" action="/ideas/{{idea.slug}}/unjoin">
+            <button type="submit" class="btn btn-primary" id="unjoin">
+                <span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
+                Leave this idea
+            </button>
+        </form>
+    </div>
+    {{/if}}
+</div>
+
+<h4>Comments:</h4>
+<ul class="media-list">
+    {{#each comments}}
+        <li class="media">
+            <div class="media-left">
+                <a href="/profile/{{this.fullAuthor._id}}">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="media-body">
+                <h5 class="media-heading">
+                    {{this.fullAuthor.firstName}} {{this.fullAuthor.lastName}} 
+                    <small>({{this.fullAuthor.ideas.length}} Ideas)</small>
+                </h5>
+                <p>{{this.notes}}</p>
+            </div>
+        </li>
+    {{/each}}
+</ul>
+
+<h4>Add a comment:</h4>
+<form method="POST" action="">
+    <textarea class="form-control" id="desc" rows="3" name="notes"></textarea>
+    <button type="submit" class="btn btn-default pull-right">Comment</button>
+</form>
+</div>

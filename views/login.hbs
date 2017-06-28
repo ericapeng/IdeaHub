@@ -1,0 +1,22 @@
+<div class="col-md-5">
+{{#if alert}}
+<div class="alert alert-danger" role="alert">
+    {{alert}}
+</div>
+{{/if}}
+<form method="POST" action="">
+    <div class="form-group">
+        <label for="username">
+            <strong>Username:</strong>
+        </label>
+        <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">
+            <strong>Password:</strong>
+        </label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-default">Sign In</button>
+</form>
+</div>
