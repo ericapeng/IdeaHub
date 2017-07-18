@@ -1,12 +1,12 @@
-#IdeaHub 
-###The Entrepreneurial Playground Where Dreams Come True
+# IdeaHub 
+### The Entrepreneurial Playground Where Dreams Come True
 
-##Overview
+## Overview
 People often have ideas that they believe can bloom into a successful business, but lack the resources to take the first step. Wouldn't it be nice to have a single place where you can see how successful your idea might be, find team members, and get advice from other experienced entrepreneurs?
 
 IdeaHub will be the a single place where all that can be done! Users can create there own profiles, post ideas, and share their opinions on the success-rate of others' ideas!
 
-##Data Model
+## Data Model
 We store users, idea posts, comments, and notifications
  - each user has a profile, idea posts, and notifications
  - each idea post additionally contains a list of supporters (essentially likes), potential team members, and comments
@@ -81,7 +81,7 @@ Idea.plugin(URLSlugs('title'));
 User.plugin(passportLocalMongoose);
 ```
 
-##Wireframes
+## Wireframes
 /registration - page for registering a new user
 ![registration](/documents/register.jpg?raw=true)
 /login - page for logging in
@@ -103,10 +103,10 @@ User.plugin(passportLocalMongoose);
 /profile/:id - page for viewing other users' profiles
 ![profile](/documents/profile.jpg?raw=true)
 
-##Site Map
+## Site Map
 ![site-map](/documents/site-map.jpg?raw=true)
 
-##User Stories
+## User Stories
 1. as a user, I can create ideas
 2. as a user, I can get notifications of activity on my ideas
 3. as a user, I can comment on ideas
@@ -117,7 +117,7 @@ User.plugin(passportLocalMongoose);
 8. as a user, I can edit my profile
 9. as a user, I can view others' profiles
 
-##Research Topics
+## Research Topics
  - (6 points) Integrate User Authentification
      - Allow users to maintain an account and sign in and out.
      - Using passport-local-mongoose
