@@ -6,6 +6,8 @@ People often have ideas that they believe can bloom into a successful business, 
 
 IdeaHub will be the a single place where all that can be done! Users can create there own profiles, post ideas, and share their opinions on the success-rate of others' ideas!
 
+This was my final project for NYU's Applied Internet Technologies course.
+
 ## Data Model
 We store users, idea posts, comments, and notifications
  - each user has a profile, idea posts, and notifications
